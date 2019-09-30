@@ -8,6 +8,9 @@ import {
 import axios from "axios";
 import Postitem from './Postitem';
 import DropdownMenu from 'react-native-dropdown-menu';
+import Icon2 from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 
 export default class App extends React.Component {
  
@@ -85,6 +88,15 @@ export default class App extends React.Component {
 
 
 
+                 <View style={styles.footer}>
+        <Icon  name="home" size={30} onPress={()=>this.props.navigation.navigate("Home")}/> 
+        <Icon  name="search" size={30} onPress={()=>this.props.navigation.navigate("search")}/> 
+        <Icon2 name="md-add-circle" size={30} onPress={()=>this.props.navigation.navigate("add")}/> 
+        <Icon  name="user" size={30} onPress={()=>this.props.navigation.navigate("profile")}/> 
+        <Icon name="sign-out" size={30} onPress={()=>this.props.navigation.navigate("login")}/>
+    </View>
+
+
   </View>
  );
 }}
@@ -119,6 +131,13 @@ header:{
  addButtonText:{
    color:'#fff',
    // fontSize:24,
- }
+ },
+ footer: {
+  backgroundColor: "gold",
+  flexDirection: "row",
+  justifyContent: "space-around",
+  alignItems: "center",
+  height: 50
+},
 });
 

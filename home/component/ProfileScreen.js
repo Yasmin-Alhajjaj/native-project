@@ -71,7 +71,7 @@ render(){
         <View style={styles.footer}>
         <Icon  name="home" size={30} onPress={()=>this.props.navigation.navigate("Home")}/> 
         <Icon  name="search" size={30} onPress={()=>this.props.navigation.navigate("search")}/> 
-        <Icon2 name="md-add-circle" size={30} onPress={this.a}/> 
+        <Icon2 name="md-add-circle" size={30} onPress={()=>this.props.navigation.navigate("add")}/> 
         <Icon  name="user" size={30} onPress={()=>this.props.navigation.navigate("profile")}/> 
         <Icon name="sign-out" size={30} onPress={()=>this.props.navigation.navigate("login")}/>
     </View>

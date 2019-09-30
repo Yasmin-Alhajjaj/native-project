@@ -10,7 +10,15 @@ router.get("/id", (req, res) => {
     })
 })
 
-
+router.post("/addpost", (req, res) => {
+    let creat = req.body
+    // console.log("SERVER", creat)
+    //console.log("Server Body:", req.body)
+    Tamimi.createPosts(creat, result => {
+        res.json(result);
+    });
+    // console.log("hi")
+ });
 
 
 
