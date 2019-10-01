@@ -39,14 +39,14 @@ booking=(booking,namebook)=>{
    />
    <CardImage  style={{borderBottomWidth:2,  borderColor:"grey",}}
      source={{uri: (item.img)}} 
-      title={item.category}
+      // title={item.category}
       color="black"
    />
-   {/* <CardTitle 
+   <CardTitle 
      title={item.category}
      style={{ marginTop:-17}}
 
-   /> */}
+   />
 
 <CardTitle
      style={{ marginTop:-20}}

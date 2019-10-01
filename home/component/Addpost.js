@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Main from './Main'
-// import Photo from './Photo'
+import Photo from './Photo'
 // import Stat from './component/Stat'
 import Icon2 from 'react-native-vector-icons/Ionicons';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -8,6 +8,13 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 import { StyleSheet, Text, View, Button } from 'react-native';
 export default class App extends Component {
+
+    state = {
+        name:this.props.navigation.state.params.name ,
+      };
+
+
+
    render() {
        return (
            <View style={styles.con}>
@@ -16,13 +23,13 @@ export default class App extends Component {
                    {/* <Text style={styles.headerContant}>
            upload image
          </Text> */}
-                   {/* <Photo /> */}
+                   <Photo />
                </View>
                <View>
                    {/* <Stat /> */}
                </View>
                <View>
-                   <Main />
+                   <Main name={this.state.name} />
                </View>
        
            </View>

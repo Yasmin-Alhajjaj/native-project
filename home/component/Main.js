@@ -25,6 +25,7 @@ export default class Main extends Component {
            });
            let posted =
            {
+            name:this.props.name,
                // date: this.state.textArray,
                description: this.state.noteText,
                state: this.state.take,
@@ -44,6 +45,7 @@ export default class Main extends Component {
        this.setState({ textArray: this.state.textArray })
    }
    render() {
+       console.log('this.props.name', this.props.name)
        let notes = this.state.textArray.map((val, key) => {
            return <Todo key={key} keyval={key} val={val} deleteMethod={() => this.deleteNote(key)} />
        })
