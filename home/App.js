@@ -11,7 +11,7 @@ import HomeScreen from './component/HomeScreen';
 import ProfileScreen from './component/ProfileScreen';
 import Search from "./component/Search"
 import Addpost from "./component/Addpost"
-import Photo from "./component/Photo"
+
 
 
 const RootStack = createStackNavigator(
@@ -25,7 +25,7 @@ const RootStack = createStackNavigator(
      signup:Signup,
      search:Search,
      add:Addpost,
-     photo:Photo
+
   },
   {
     initialRouteName: 'login',

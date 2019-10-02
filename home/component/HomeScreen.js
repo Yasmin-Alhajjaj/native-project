@@ -23,7 +23,7 @@ export default class HomeScreen extends Component{
 
  componentDidMount=()=> {
    axios
-     .get("http://10.60.236.124:9000/Yasmin/all")
+     .get("http://192.168.1.24:9000/Yasmin/all")
      .then(res => {
        this.setState({ posts: res.data });
     })
@@ -51,22 +51,19 @@ render(){
       </View>
     );}}
 
-
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "skyblue",
     flex: 1,
     justifyContent: "center"
     // alignItems:"center",
   },
   body: {
-    backgroundColor: "skyblue",
     flex: 1,
     justifyContent: "center",
     alignItems: "center"
   },
   footer: {
-    backgroundColor: "gold",
+    backgroundColor: "#888",
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
